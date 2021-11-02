@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public float ROTATION_SPEED = 2f;
 
-    private Vector3 velocity = new Vector3();
+    public bool IsMoving = false;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
         float horiz = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * ROTATION_SPEED;
         float vert = Input.GetAxis("Vertical") * Time.fixedDeltaTime * MAX_SPEED;
 
+        IsMoving = horiz != 0f || vert != 0f;
 
         transform.Translate(0, 0, vert);
         transform.Rotate(0, horiz, 0);

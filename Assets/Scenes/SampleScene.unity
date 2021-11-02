@@ -158,6 +158,7 @@ MonoBehaviour:
   MAX_SPEED: 10
   ACCELERATION: 0.1
   ROTATION_SPEED: 200
+  IsMoving: 0
 --- !u!65 &217097555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -425,6 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 217097553}
   cameraTranslation: {x: 0, y: 2.5, z: -6}
+  cameraRotationXSpeed: 100
 --- !u!1 &1439134444
 GameObject:
   m_ObjectHideFlags: 0
